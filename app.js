@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 8000;
+const PORT = 8002;
 
 app.set('view engine', 'ejs');
 app.use('/views', express.static(__dirname + '/views'));
@@ -25,7 +25,7 @@ app.post('/practice30', function (req, res) {
   if (realId === req.body.userId && realPw === req.body.userPw) {
     res.send({ data: req.body, isSuccess: true });
   } else {
-    res.send({ data: req.body, isSuccess: false });
+    res.send({ isSuccess: false });
   }
   // res.send(req.body);
 });

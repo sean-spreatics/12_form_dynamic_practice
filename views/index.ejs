@@ -147,7 +147,7 @@
           console.log(response);
           console.log(response.data);
           if (response.data.isSuccess) {
-            loginResult.textContent = '로그인 성공😁';
+		  loginResult.textContent = `${response.data.data.userId}님! 로그인 성공😁`;
             loginResult.classList.remove('error');
             loginResult.classList.add('success');
           } else {
